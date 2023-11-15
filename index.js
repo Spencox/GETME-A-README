@@ -84,7 +84,7 @@ const sectionQuestions = [
   {
     type: 'input',
     message: 'Define contribution guidelines for the project:',
-    name: 'Contribution',
+    name: 'Contributions',
   },
   // test instructions 
   {
@@ -94,10 +94,28 @@ const sectionQuestions = [
   }
   ];
 
-function  selectedSectionQuestions(sectionsArr) {
-  const selectedQuestions = helper.customReadMeQuestions(sectionsArr, sectionQuestions);
-
-}
+  // comprehensive list of licenses 
+  const licenses = {
+    'Apache': ['Apache License 2.0'],
+    'Boost': ['Boost Software License 1.0'],
+    'BSD': ['BSD 3-Clause License', 'BSD 2-Clause License'],
+    'Creative Commons': ['CC0', 'CC BY 4.0', 'CC BY-SA 4.0', 'CC BY-NC 4.0', 'CC BY-ND 4.0', 'CC BY-NC-SA 4.0', 'CC BY-NC-ND 4.0'],
+    'Eclipse': ['Eclipse Public License 1.0'],
+    'GNU': ['GNU GPL v3', 'GNU GPL v2', 'GNU AGPL v3', 'GNU LGPL v3', 'GNU FDL v1.3'],
+    'The Organization for Ethical Source': ['The Hippocratic License 2.1', 'The Hippocratic License 3.0'],
+    'IBM': ['IBM Public License Version 1.0'],
+    'ISC': ['ISC License (ISC)'],
+    'None': ['None'],
+    'MIT': ['The MIT License'],
+    'Mozilla': ['Mozilla Public License 2.0'],
+    'Open Data Commons': ['Attribution License (BY)', 'Open Database License (ODbL)', 'Public Domain Dedication and License (PDDL)'],
+    'Perl': ['The Perl License', 'The Artistic License 2.0'],
+    'SIL': ['SIL Open Font License 1.1'],
+    'Unlicense': ['The Unlicense'],
+    'WTFPL': ['The Do What the Fuck You Want to Public License'],
+    'Zlib': ['The zlib/libpng License']
+  };
+  
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -106,7 +124,6 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-  
   const programTitle = `
   ____ _____ _____ __  __ _____        _         ____  _____    _    ____  __  __ _____ 
  / ___| ____|_   _|  \\/  | ____|      / \\       |  _ \\| ____|  / \\  |  _ \\|  \\/  | ____|
@@ -118,12 +135,22 @@ console.log(programTitle);
   console.log(`The command line tool to quickly generate a high quality README file.
   `);
   
-  inquirer.prompt(introQuestions).then((answers) => {
-    //console.log(answers);
-    console.log(JSON.stringify(answers, null, '  '));
-    selectedSectionQuestions(answers.sections);
+  inquirer.prompt(introQuestions).then((introAnswers) => {
+    // get basic user data Project Name, GitHub Username, Email
+    const userSections = helper.customReadMeQuestions(introAnswers.sections, sectionQuestions);
+    console.log('User Sections' , userSections);
+    // Allow user to pick what sections to fill in
+    inquirer.prompt(userSections).then((sectionAnswers) => {
+      console.log(sectionAnswers);
+    });
+    // select a license
+    inquirer.prompt
   });
+  
 }
 
 // Function call to initialize app
 init();
+
+
+

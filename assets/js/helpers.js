@@ -5,11 +5,11 @@ module.exports = {
         sections.forEach(section => {
             for(const question of questions) {
                 if(section === question.name) {
-                    userSelectedSections.push()
+                    userSelectedSections.push(question);
                 }
             }
         })
-       
+        return userSelectedSections
     }
 }
 
