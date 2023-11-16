@@ -95,7 +95,7 @@ const sectionQuestions = [
   ];
 
   // comprehensive list of licenses 
-  const licenses = {
+  const licenseOptions = {
     'Apache': ['Apache License 2.0'],
     'Boost': ['Boost Software License 1.0'],
     'BSD': ['BSD 3-Clause License', 'BSD 2-Clause License'],
@@ -115,7 +115,6 @@ const sectionQuestions = [
     'WTFPL': ['The Do What the Fuck You Want to Public License'],
     'Zlib': ['The zlib/libpng License']
   };
-  
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -134,19 +133,43 @@ function init() {
 console.log(programTitle);
   console.log(`The command line tool to quickly generate a high quality README file.
   `);
-  
+  // get basic user data Project Name, GitHub Username, Email
   inquirer.prompt(introQuestions).then((introAnswers) => {
-    // get basic user data Project Name, GitHub Username, Email
     const userSections = helper.customReadMeQuestions(introAnswers.sections, sectionQuestions);
-    console.log('User Sections' , userSections);
+    
     // Allow user to pick what sections to fill in
     inquirer.prompt(userSections).then((sectionAnswers) => {
       console.log(sectionAnswers);
+      // select a license organization
+      inquirer.prompt([
+        {
+          type: 'list',
+          name: 'organization',
+          message: 'Select an organization:',
+          choices: Object.keys(licenseOptions),
+        }
+      ]).then((organizationAnswer) => {
+        const selectedOrganization = organizationAnswer.organization;
+          
+          // select a license type
+          inquirer.prompt([
+            {
+              type: 'list',
+              name: 'license',
+              message: `Select a license for ${selectedOrganization}:`,
+              choices: licenseOptions[selectedOrganization],
+            } 
+          ]).then((licenseType) => {
+            const selectedLicense = licenseType.license;
+            if (selectedLicense === 'None') {
+              console.log(`You have chosen not to associate a specific license with ${selectedOrganization}.`);
+            } else {
+              console.log(`You have selected the ${selectedLicense} license for ${selectedOrganization}.`);
+            }
+          })
+      })
     });
-    // select a license
-    inquirer.prompt
   });
-  
 }
 
 // Function call to initialize app
