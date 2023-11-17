@@ -14,22 +14,39 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  //return 
+function renderLicenseSection(licenseBadge, licenseLink) {
+  return `[![License](${licenseBadge})](${licenseLink})`
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   // build license badge
   console.log('MARKDOWN FUNCTION: ', data)
-  console.log(renderLicenseBadge(data.License));
-  console.log(renderLicenseLink(data.License));
-  console.log(renderLicenseSection(data.License));
+  const licenseBadge = renderLicenseBadge(data.License);
+  const licenseLink = renderLicenseLink(data.License);
+  const licenseSection = renderLicenseSection(licenseBadge, licenseLink);
 
+  const markdown = 
+  `
+  #${data.projectName}
+
+  ${data.Description ? '## Description':''}
   
+  ${licenseSection ? `${licenseSection}`:''}
   
+  ${data.Installation ? '## Installation':''}
   
-  //return markdown
+  ${data.Usage ? '## Usage':''}
+  
+  ${data.Contributions ? '## Contributions':''}
+  
+  ${data.Tests ? '## Tests':''}
+  
+  ${data.Features ? '## Features':''}
+  
+  ${data.Badges ? '## Badges':''}
+  `
+  return markdown
 }
 
 module.exports = generateMarkdown;

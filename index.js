@@ -100,6 +100,9 @@ const sectionQuestions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   console.log('Inside File Write Function');
+  console.log(fileName);
+  console.log(data);
+  fs.writeFile(fileName, data, (err) => err ? console.log(err) : console.log('Success!'));
 }
 
 // TODO: Create a function to initialize app
@@ -150,7 +153,8 @@ console.log(`The command line tool to quickly generate a high quality README fil
           //console.log(allUserAnswers);
           // generate markdown doc
           const customREADME = generateMarkdown(allUserAnswers);
-          //console.log("Final Log", customREADME);
+          console.log("Final Log", customREADME);
+          writeToFile('README.md', customREADME)
         })
       })
     });
