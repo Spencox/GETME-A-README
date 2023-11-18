@@ -8,7 +8,7 @@ module.exports = {
     'Creative Commons': ['CC0', 'CC BY 4.0', 'CC BY-SA 4.0', 'CC BY-NC 4.0', 'CC BY-ND 4.0', 'CC BY-NC-SA 4.0', 'CC BY-NC-ND 4.0'],
     'Eclipse': ['Eclipse Public License 1.0'],
     'GNU': ['GNU GPL v3', 'GNU GPL v2', 'GNU AGPL v3', 'GNU LGPL v3', 'GNU FDL v1.3'],
-    'The Organization for Ethical Source': ['The Hippocratic License 2.1', 'The Hippocratic License 3.0'],
+    'The Organization for Ethical Source': ['Hippocratic License 2.1', 'Hippocratic License 3.0'],
     'IBM': ['IBM Public License Version 1.0'],
     'ISC': ['ISC License (ISC)'],
     'None': ['None'],
@@ -18,7 +18,7 @@ module.exports = {
     'Perl': ['The Perl License', 'The Artistic License 2.0'],
     'SIL': ['SIL Open Font License 1.1'],
     'Unlicense': ['The Unlicense'],
-    'WTFPL': ['The Do What the Fuck You Want to Public License'],
+    'WTFPL': ['WTFPL'],
     'Zlib': ['The zlib/libpng License']
   },
 

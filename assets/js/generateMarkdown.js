@@ -1,4 +1,5 @@
 const licenseData = require('./license-data');
+const _ = require('lodash');
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
@@ -28,27 +29,20 @@ function generateMarkdown(data) {
 
   const markdown = 
   `
-  #${data.projectName}
-
-  ${data.Description ? '## Description':''}
-  
+  # ${data.projectName}
   ${licenseSection ? `${licenseSection}`:''}
-  
+  ${data.Description ? '## Description':''}
   ${data.Installation ? '## Installation':''}
-  
   ${data.Usage ? '## Usage':''}
-  
   ${data.Contributions ? '## Contributions':''}
-  
   ${data.Tests ? '## Tests':''}
-  
   ${data.Features ? '## Features':''}
-  
   ${data.Badges ? '## Badges':''}
+  ## License
   `
-  return markdown
+  const neatMarkdown = _.trim(markdown).replace(/\n\s*\n/g, '\n');
+
+  return neatMarkdown
 }
 
 module.exports = generateMarkdown;
-
-
