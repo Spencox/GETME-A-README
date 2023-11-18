@@ -14,16 +14,13 @@ module.exports = {
     makeTOC(data) {
         const tableOfContents = 
         `
-        ${data.Installation ? '- [Installation](#installation)':''}
-        ${data.Usage ? '- [Usage](#Usage)':''}
-        ${data.Contributions ? '- [Contributions](#Contributions)':''}
-        ${data.Tests ? '- [Tests](#Tests)':''}
-        ${data.Features ? '- [Features](#Features)':''}
-        ${data.Badges ? '- [Badges](#Badges)':''}
+${data.Installation ? '- [Installation](#installation)':''}
+${data.Usage ? '- [Usage](#usage)':''}
+${data.Contributions ? '- [Contributions](#contributions)':''}
+${data.Tests ? '- [Tests](#tests)':''}
+${data.Features ? '- [Features](#features)':''}
+${data.Badges ? '- [Badges](#badges)':''}
         `
-        //console.log(tableOfContents);
-        //const neatTOC = tableOfContents.trim().replace(/\n\s*\n/g, '\n');
-        //console.log('NEAT CONSOLE LOG: ', neatTOC)
         return tableOfContents
     }
 }

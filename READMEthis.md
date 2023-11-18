@@ -8,3 +8,4 @@ CITE: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 CITE: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 CITE: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace 
 CITE - Regex
+CITE - https://gist.github.com/Amitabh-K/ae073eea3d5207efaddffde19b1618e8

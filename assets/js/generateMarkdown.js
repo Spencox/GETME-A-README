@@ -28,28 +28,34 @@ function generateMarkdown(data) {
   const licenseSection = renderLicenseSection(licenseBadge, licenseLink);
 
   const tableOfContents = helper.makeTOC(data);
-  console.log(tableOfContents);
   const neatTOC = tableOfContents.trim().replace(/\n\s*\n/g, '\n');
   
   const markdown = 
   `
-  # ${data.projectName}
-  ${licenseSection ? `${licenseSection}`:''}
-  ${data.Description ? `## Description
-  ${data.Description}`:''}
-  ## Table of Contents  
-  ${tableOfContents ? `${neatTOC}`:''}
-  ${data.Installation ? '## Installation':''}
-  ${data.Usage ? '## Usage':''}
-  ${data.Contributions ? '## Contributions':''}
-  ${data.Tests ? '## Tests':''}
-  ${data.Features ? '## Features':''}
-  ${data.Badges ? '## Badges':''}
-  ## License
-
-  ## Questions
-  If you have any questions about the project you can go to https://github.com/${data.githubName} or email ${data.email}.
-  `;
+# ${data.projectName}
+${licenseSection ? `${licenseSection}`:''}
+${data.Description ? `## Description
+${data.Description}`:''}
+${tableOfContents ? `## Table of Contents
+${neatTOC}`:''}
+${data.Installation ? `## Installation
+${data.Installation}`:''}
+${data.Usage ? `## Usage
+${data.Usage}`:''}
+${data.Contributions ? `## Contributions
+${data.Contributions}`:''}
+${data.Tests ? `## Tests
+${data.Tests}`:''}
+${data.Features ? `## Features
+${data.Features}`:''}
+${data.Badges ? `## Badges
+${data.Badges}`:''}
+## License
+This app is licensed under the ${data.License} license. Information on the license can be found online at ${licenseBadge} or by clicking the badge above.
+## Questions
+GitHub Repo: https://github.com/${data.githubName}
+Email: ${data.email}
+`;
   const neatMarkdown = markdown.trim().replace(/\n\s*\n/g, '\n');
 
   return neatMarkdown
