@@ -1,7 +1,5 @@
-# <Your-Project-Title>
+# Big Fancy Title
 
-License Badge
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
 
 ## Description
 

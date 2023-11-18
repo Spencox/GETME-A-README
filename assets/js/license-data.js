@@ -8,7 +8,7 @@ module.exports = {
     'Creative Commons': ['CC0', 'CC BY 4.0', 'CC BY-SA 4.0', 'CC BY-NC 4.0', 'CC BY-ND 4.0', 'CC BY-NC-SA 4.0', 'CC BY-NC-ND 4.0'],
     'Eclipse': ['Eclipse Public License 1.0'],
     'GNU': ['GNU GPL v3', 'GNU GPL v2', 'GNU AGPL v3', 'GNU LGPL v3', 'GNU FDL v1.3'],
-    'The Organization for Ethical Source': ['The Hippocratic License 2.1', 'The Hippocratic License 3.0'],
+    'The Organization for Ethical Source': ['Hippocratic License 2.1', 'Hippocratic License 3.0'],
     'IBM': ['IBM Public License Version 1.0'],
     'ISC': ['ISC License (ISC)'],
     'None': ['None'],
@@ -18,7 +18,7 @@ module.exports = {
     'Perl': ['The Perl License', 'The Artistic License 2.0'],
     'SIL': ['SIL Open Font License 1.1'],
     'Unlicense': ['The Unlicense'],
-    'WTFPL': ['The Do What the Fuck You Want to Public License'],
+    'WTFPL': ['WTFPL'],
     'Zlib': ['The zlib/libpng License']
   },
 
@@ -147,5 +147,47 @@ module.exports = {
       'https://img.shields.io/badge/License-Zlib-lightgrey.svg',
       'https://opensource.org/licenses/Zlib',
     ],
-  }  
+  },
+  
+  sectionDefaults : {
+    'Description' : `
+Provide a short description explaining the what, why, and how of your project. 
+
+Use the following questions as a guide:
+- What was your motivation?
+- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
+- What problem does it solve?
+- What did you learn?
+`,
+  'Installation' : `
+What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+`,
+  'Usage' : `
+Provide instructions and examples for use. Include screenshots as needed.
+
+To add a screenshot, create an \`assets/images\` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+
+\`\`\`md
+![alt text](assets/images/screenshot.png)
+\`\`\`
+`,
+  'License' : `
+The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+`,
+  'Features' : `
+If your project has a lot of features, list them here.
+`,
+  'Badges' : `
+![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
+
+Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+`,
+  'Contributions' : `
+If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
+`,
+  'Tests' : `
+Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+`
+  } 
 };
+
