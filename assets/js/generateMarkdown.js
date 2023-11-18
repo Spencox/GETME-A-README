@@ -1,5 +1,5 @@
 const licenseData = require('./license-data');
-const _ = require('lodash');
+const helper = require('./helpers');
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
@@ -27,11 +27,18 @@ function generateMarkdown(data) {
   const licenseLink = renderLicenseLink(data.License);
   const licenseSection = renderLicenseSection(licenseBadge, licenseLink);
 
+  const tableOfContents = helper.makeTOC(data);
+  console.log(tableOfContents);
+  const neatTOC = tableOfContents.trim().replace(/\n\s*\n/g, '\n');
+  
   const markdown = 
   `
   # ${data.projectName}
   ${licenseSection ? `${licenseSection}`:''}
-  ${data.Description ? '## Description':''}
+  ${data.Description ? `## Description
+  ${data.Description}`:''}
+  ## Table of Contents  
+  ${tableOfContents ? `${neatTOC}`:''}
   ${data.Installation ? '## Installation':''}
   ${data.Usage ? '## Usage':''}
   ${data.Contributions ? '## Contributions':''}
@@ -39,8 +46,11 @@ function generateMarkdown(data) {
   ${data.Features ? '## Features':''}
   ${data.Badges ? '## Badges':''}
   ## License
-  `
-  const neatMarkdown = _.trim(markdown).replace(/\n\s*\n/g, '\n');
+
+  ## Questions
+  If you have any questions about the project you can go to https://github.com/${data.githubName} or email ${data.email}.
+  `;
+  const neatMarkdown = markdown.trim().replace(/\n\s*\n/g, '\n');
 
   return neatMarkdown
 }

@@ -70,6 +70,17 @@ const sectionQuestions = [
       type: 'input',
       message: 'Enter a description for the project:',
       name: 'Description',
+      default: 
+      `
+      Provide a short description explaining the what, why, and how of your project. 
+      
+      Use the following questions as a guide:
+      - What was your motivation?
+      - Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
+      - What problem does it solve?
+      - What did you learn?
+      
+      `
   },
   // installation instructions
   {
@@ -153,7 +164,7 @@ console.log(`The command line tool to quickly generate a high quality README fil
           //console.log(allUserAnswers);
           // generate markdown doc
           const customREADME = generateMarkdown(allUserAnswers);
-          console.log("Final Log", customREADME);
+          //console.log("Final Log", customREADME);
           writeToFile('README.md', customREADME)
         })
       })
