@@ -51,9 +51,9 @@ ${data.Features}`:''}
 ${data.Badges ? `## Badges
 ${data.Badges}`:''}
 ## License
-This app is licensed under the ${data.License} license. Information on the license can be found online at ${licenseBadge} or by clicking the badge above.
+This app is licensed under the ${data.License} license. Information on the license can be found online at ${licenseLink} or by clicking the badge above.
 ## Questions
-GitHub Repo: https://github.com/${data.githubName}
+GitHub Repo: https://github.com/${data.githubName}/${data.projectName}  
 Email: ${data.email}
 `;
   const neatMarkdown = markdown.trim().replace(/\n\s*\n/g, '\n');

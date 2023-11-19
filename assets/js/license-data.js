@@ -2,24 +2,24 @@ module.exports = {
    // license types
   // comprehensive list of licenses 
     licenseOptions: {
-    'Apache': ['Apache License 2.0'],
-    'Boost': ['Boost Software License 1.0'],
-    'BSD': ['BSD 3-Clause License', 'BSD 2-Clause License'],
-    'Creative Commons': ['CC0', 'CC BY 4.0', 'CC BY-SA 4.0', 'CC BY-NC 4.0', 'CC BY-ND 4.0', 'CC BY-NC-SA 4.0', 'CC BY-NC-ND 4.0'],
-    'Eclipse': ['Eclipse Public License 1.0'],
-    'GNU': ['GNU GPL v3', 'GNU GPL v2', 'GNU AGPL v3', 'GNU LGPL v3', 'GNU FDL v1.3'],
-    'The Organization for Ethical Source': ['Hippocratic License 2.1', 'Hippocratic License 3.0'],
-    'IBM': ['IBM Public License Version 1.0'],
-    'ISC': ['ISC License (ISC)'],
-    'None': ['None'],
-    'MIT': ['The MIT License'],
-    'Mozilla': ['Mozilla Public License 2.0'],
-    'Open Data Commons': ['Attribution License (BY)', 'Open Database License (ODbL)', 'Public Domain Dedication and License (PDDL)'],
-    'Perl': ['The Perl License', 'The Artistic License 2.0'],
-    'SIL': ['SIL Open Font License 1.1'],
-    'Unlicense': ['The Unlicense'],
-    'WTFPL': ['WTFPL'],
-    'Zlib': ['The zlib/libpng License']
+      'Apache': ['Apache License 2.0'],
+      'Boost': ['Boost Software License 1.0'],
+      'BSD': ['BSD 3-Clause License', 'BSD 2-Clause License'],
+      'Creative Commons': ['CC0-1.0', 'CC BY 4.0', 'CC BY-SA 4.0', 'CC BY-NC 4.0', 'CC BY-ND 4.0', 'CC BY-NC-SA 4.0', 'CC BY-NC-ND 4.0'],
+      'Eclipse': ['Eclipse Public License 1.0'],
+      'GNU': ['GNU GPL v3', 'GNU GPL v2', 'GNU AGPL v3', 'GNU LGPL v3', 'GNU FDL v1.3'],
+      'The Organization for Ethical Source': ['Hippocratic License 2.1', 'Hippocratic License 3.0'],
+      'IBM': ['IBM Public License Version 1.0'],
+      'ISC': ['ISC License (ISC)'],
+      'MIT': ['MIT License'],
+      'Mozilla': ['Mozilla Public License 2.0'],
+      'Open Data Commons': ['Attribution License (BY)', 'Open Database License (ODbL)', 'Public Domain Dedication and License (PDDL)'],
+      'Perl': ['Perl License (Artistic-2.0)'],
+      'SIL': ['SIL'],
+      'Unlicense': ['Unlicense'],
+      'WTFPL': ['WTFPL'],
+      'Zlib': ['Zlib'],
+      'None': ['None'],
   },
 
   licenseBadgeData: {
@@ -115,15 +115,15 @@ module.exports = {
       'https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg',
       'https://opensource.org/licenses/MPL-2.0',
     ],
-    'Open Data Commons Attribution': [
+    'Attribution License (BY)': [
       'https://img.shields.io/badge/License-ODC_BY-brightgreen.svg',
       'https://opendatacommons.org/licenses/by/',
     ],
-    'ODbL': [
+    'Open Database License (ODbL)': [
       'https://img.shields.io/badge/License-ODbL-brightgreen.svg',
       'https://opendatacommons.org/licenses/odbl/',
     ],
-    'PDDL': [
+    'Public Domain Dedication and License (PDDL)': [
       'https://img.shields.io/badge/License-PDDL-brightgreen.svg',
       'https://opendatacommons.org/licenses/pddl/',
     ],
@@ -131,11 +131,11 @@ module.exports = {
       'https://img.shields.io/badge/License-Perl-0298c3.svg',
       'https://opensource.org/licenses/Artistic-2.0',
     ],
-    'SIL Open Font License 1.1': [
+    'SIL': [
       'https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg',
       'https://opensource.org/licenses/OFL-1.1',
     ],
-    'The Unlicense': [
+    'Unlicense': [
       'https://img.shields.io/badge/license-Unlicense-blue.svg',
       'http://unlicense.org/',
     ],
@@ -143,10 +143,14 @@ module.exports = {
       'https://img.shields.io/badge/License-WTFPL-brightgreen.svg',
       'http://www.wtfpl.net/about/',
     ],
-    'The zlib/libpng License': [
+    'Zlib': [
       'https://img.shields.io/badge/License-Zlib-lightgrey.svg',
       'https://opensource.org/licenses/Zlib',
     ],
+    'None': [
+        '',
+        '',
+      ]
   },
   
   sectionDefaults : {

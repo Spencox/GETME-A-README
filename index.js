@@ -22,7 +22,7 @@ const introQuestions = [
         return 'Must enter a project name';
       }
       return true;
-    },
+    }
   },   
     // github name 
   {
@@ -34,7 +34,7 @@ const introQuestions = [
         return 'Must enter a GitHub username';
       }
       return true;
-    },
+    }
   },
   // email 
   {
@@ -79,7 +79,13 @@ const introQuestions = [
       {
         name: 'Badges'
       },
-    ]
+    ],
+    validate(answer) {
+      if (answer.length < 1) {
+        return 'Must choose at least one section';
+      }
+      return true;
+    },
   }
 ];
 
@@ -123,14 +129,27 @@ const sectionQuestions = [
     name: 'Tests',
     default: undefined,
     filter: (input) => (input === '' ? license.sectionDefaults['Tests'] : input)
+  },
+  // features  
+  {
+    type: 'input',
+    message: 'Enter details on project features:',
+    name: 'Features',
+    default: undefined,
+    filter: (input) => (input === '' ? license.sectionDefaults['Features'] : input)
+  },
+  // badges 
+  {
+    type: 'input',
+    message: 'Enter any badges data:',
+    name: 'Badges',
+    default: undefined,
+    filter: (input) => (input === '' ? license.sectionDefaults['Badges'] : input)
   }
   ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  console.log('Inside File Write Function');
-  console.log(fileName);
-  console.log(data);
   fs.writeFile(fileName, data, (err) => err ? console.log(err) : console.log('Success!'));
 }
 
@@ -149,7 +168,6 @@ console.log(`The command line tool to quickly generate a high quality README fil
   // get basic user data Project Name, GitHub Username, Email
   inquirer.prompt(introQuestions).then((introAnswers) => {
     const userSections = helper.customReadMeQuestions(introAnswers.sections, sectionQuestions);
-    console.log('USER SECTIONS: ', userSections)
     // Allow user to pick what sections to fill in
     inquirer.prompt(userSections).then((sectionAnswers) => {
       // select a license organization
@@ -172,12 +190,6 @@ console.log(`The command line tool to quickly generate a high quality README fil
             choices: license.licenseOptions[selectedOrganization],
           } 
         ]).then((licenseType) => {
-          const selectedLicense = licenseType.License;
-          // if (selectedLicense === 'None') {
-          //   console.log(`You have chosen not to associate a specific license with ${selectedOrganization}.`);
-          // } else {
-          //   console.log(`You have selected the ${selectedLicense} license for ${selectedOrganization}.`);
-          // }
           const allUserAnswers = {...introAnswers, ...sectionAnswers,...licenseType}
           //console.log(allUserAnswers);
           // generate markdown doc
