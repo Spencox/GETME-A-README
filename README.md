@@ -9,6 +9,7 @@ The command line program is designed to streamline the process of creating a hig
 - [Tests](#tests)
 - [Features](#features)
 - [Badges](#badges)
+- [Credits](#credits)
 ## Installation
 Clone the repository with git clone https://github.com/Spencox/GETME-A-README.git, navigate to the project directory using cd README-Generator, install dependencies with npm install, run the program with node index.js, answer the prompts to provide project information, and the README.md will be generated in the project directory. Customize the generated README.md to suit your project's needs.
 ## Usage
@@ -20,7 +21,9 @@ Feel free to push the limits of this program by experimenting with various input
 ## Features
 This README.md generator boasts a user-friendly command-line interface, leveraging Inquirer.js for interactive prompts. It streamlines the documentation process by dynamically generating a high-quality README.md file based on user input. The program offers flexibility with optional sections, including Description, Installation, Usage, Contributions, and Tests, allowing users to tailor the documentation to their project's needs. It also integrates badges, features, and the ability to choose licenses, providing a comprehensive and standardized documentation solution. With an emphasis on simplicity and customization, this tool empowers users to effortlessly create well-structured README.md files, enhancing project documentation and developer collaboration.
 ## Badges
-There is only one license badge on this repo. 
+There is only one license badge on this repo.
+## Credits
+Figlet-cli NPM Package: Figlet-cli. (n.d.). Retrieved from https://www.npmjs.com/package/figlet-cli "Easter Egg Hunt, Anyone? Add ASCII Art to the Console Log" on dev.to: Deadlybyte. (n.d.). Easter Egg Hunt, Anyone? Add ASCII Art to the Console Log. Retrieved from https://dev.to/deadlybyte/easter-egg-hunt-anyone-add-ascii-art-to-the-console-log-4emg Gist by lukas-h on GitHub: Lukas-h. (n.d.). ASCII Art in JavaScript. Retrieved from https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba MDN Web Docs - String.trim: Mozilla Developer Network. (n.d.). String.prototype.trim(). Retrieved from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim MDN Web Docs - String.replace: Mozilla Developer Network. (n.d.). String.prototype.replace(). Retrieved from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace Gist by Amitabh-K on GitHub: Amitabh-K. (n.d.). JavaScript - Convert Snake Case to Camel Case. Retrieved from https://gist.github.com/Amitabh-K/ae073eea3d5207efaddffde19b1618e8
 ## License
 This app is licensed under the Mozilla Public License 2.0 license. Information on the license can be found online at https://opensource.org/licenses/MPL-2.0 or by clicking the badge above.
 ## Questions

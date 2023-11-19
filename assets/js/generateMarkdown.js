@@ -22,7 +22,6 @@ function renderLicenseSection(licenseBadge, licenseLink) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   // build license badge
-  console.log('MARKDOWN FUNCTION: ', data)
   const licenseBadge = renderLicenseBadge(data.License);
   const licenseLink = renderLicenseLink(data.License);
   const licenseSection = renderLicenseSection(licenseBadge, licenseLink);
@@ -50,6 +49,8 @@ ${data.Features ? `## Features
 ${data.Features}`:''}
 ${data.Badges ? `## Badges
 ${data.Badges}`:''}
+${data.Credits ? `## Credits
+${data.Credits}`:''}
 ## License
 This app is licensed under the ${data.License} license. Information on the license can be found online at ${licenseLink} or by clicking the badge above.
 ## Questions

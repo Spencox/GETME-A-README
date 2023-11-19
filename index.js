@@ -5,7 +5,6 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 
 // import generateMarkdown.js for helper functions
-const md = require('./assets/js/generateMarkdown');
 const helper = require('./assets/js/helpers');
 const license = require('./assets/js/license-data');
 const generateMarkdown = require('./assets/js/generateMarkdown');
@@ -24,7 +23,7 @@ const introQuestions = [
       return true;
     }
   },   
-    // github name 
+    // github username 
   {
     type: 'input',
     message: 'What is your GitHub username:',
@@ -42,7 +41,7 @@ const introQuestions = [
     message: 'What is your email address:',
     name: 'email',
     validate: function (email) {
-      valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+      valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) // cited in README
       if (valid) {
           return true;
       } else {
@@ -79,6 +78,9 @@ const introQuestions = [
       {
         name: 'Badges'
       },
+      {
+        name: 'Credits'
+      }
     ],
     validate(answer) {
       if (answer.length < 1) {
@@ -89,6 +91,7 @@ const introQuestions = [
   }
 ];
 
+// enter details for each README selection  
 const sectionQuestions = [
   // project description
   {
@@ -145,6 +148,14 @@ const sectionQuestions = [
     name: 'Badges',
     default: undefined,
     filter: (input) => (input === '' ? license.sectionDefaults['Badges'] : input)
+  },
+  // credits 
+  {
+    type: 'input',
+    message: 'Enter credits and citations:',
+    name: 'Credits',
+    default: undefined,
+    filter: (input) => (input === '' ? license.sectionDefaults['Credits'] : input)
   }
   ];
 
@@ -191,10 +202,8 @@ console.log(`The command line tool to quickly generate a high quality README fil
           } 
         ]).then((licenseType) => {
           const allUserAnswers = {...introAnswers, ...sectionAnswers,...licenseType}
-          //console.log(allUserAnswers);
-          // generate markdown doc
+          // generate markdown content
           const customREADME = generateMarkdown(allUserAnswers);
-          //console.log("Final Log", customREADME);
           writeToFile('README.md', customREADME)
         })
       })
