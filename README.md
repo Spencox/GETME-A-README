@@ -23,7 +23,18 @@ This README.md generator boasts a user-friendly command-line interface, leveragi
 ## Badges
 There is only one license badge on this repo.
 ## Credits
-Figlet-cli NPM Package: Figlet-cli. (n.d.). Retrieved from https://www.npmjs.com/package/figlet-cli "Easter Egg Hunt, Anyone? Add ASCII Art to the Console Log" on dev.to: Deadlybyte. (n.d.). Easter Egg Hunt, Anyone? Add ASCII Art to the Console Log. Retrieved from https://dev.to/deadlybyte/easter-egg-hunt-anyone-add-ascii-art-to-the-console-log-4emg Gist by lukas-h on GitHub: Lukas-h. (n.d.). ASCII Art in JavaScript. Retrieved from https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba MDN Web Docs - String.trim: Mozilla Developer Network. (n.d.). String.prototype.trim(). Retrieved from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim MDN Web Docs - String.replace: Mozilla Developer Network. (n.d.). String.prototype.replace(). Retrieved from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace Gist by Amitabh-K on GitHub: Amitabh-K. (n.d.). JavaScript - Convert Snake Case to Camel Case. Retrieved from https://gist.github.com/Amitabh-K/ae073eea3d5207efaddffde19b1618e8
+Figlet-cli. (n.d.). Retrieved from https://www.npmjs.com/package/figlet-cli
+"Easter Egg Hunt, Anyone? Add ASCII Art to the Console Log" on dev.to:
+
+Deadlybyte. (n.d.). Easter Egg Hunt, Anyone? Add ASCII Art to the Console Log. Retrieved from https://dev.to/deadlybyte/easter-egg-hunt-anyone-add-ascii-art-to-the-console-log-4emg
+
+Lukas-h. (n.d.). ASCII Art in JavaScript. Retrieved from https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+
+Mozilla Developer Network. (n.d.). String.prototype.trim(). Retrieved from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+
+Mozilla Developer Network. (n.d.). String.prototype.replace(). Retrieved from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+
+Amitabh-K. (n.d.). JavaScript - Convert Snake Case to Camel Case. Retrieved from https://gist.github.com/Amitabh-K/ae073eea3d5207efaddffde19b1618e8
 ## License
 This app is licensed under the Mozilla Public License 2.0 license. Information on the license can be found online at https://opensource.org/licenses/MPL-2.0 or by clicking the badge above.
 ## Questions
